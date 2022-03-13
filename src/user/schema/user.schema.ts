@@ -48,6 +48,11 @@ export class User{
     @Prop({required: false, default: []})
     interest: string[];
 
+    // followers
+    @IsArray()
+    @Prop({required: false, default: []})
+    followers: [{type: mongoose.Types.ObjectId, ref: 'User'}];
+
     @IsArray()
     @Prop({required: false, default: []})
     posts: [{type: mongoose.Schema.Types.ObjectId, ref: 'Post'}];

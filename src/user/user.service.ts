@@ -13,6 +13,7 @@ import * as bcrypt from 'bcrypt';
 import { CreatePostDto } from 'src/post/dto/create.post.dto';
 import { CreateEducationDto } from 'src/education/dto/education.dto';
 import { JobExperienceDto } from 'src/jobexperience/dto/job.experience.dto';
+import mongoose from 'mongoose';
 
 @Injectable()
 export class UserService {
@@ -241,6 +242,8 @@ export class UserService {
         const userData = await this.getUserProfile(id);
         return userData;
     }
+
+    //* followers
 
     //* post services
     // create post

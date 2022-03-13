@@ -9,5 +9,6 @@ export class CreateUserDto{
     salt?: string;
     image?: string;
     roles?: string[];
+    followers?: string[];
     isAdmin?: boolean;
 }
